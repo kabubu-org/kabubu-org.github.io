@@ -1,0 +1,538 @@
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i'); */
+
+html,
+body {
+    margin: 0;
+    height: 120%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Navbar CSS */
+
+.topnav {
+    background-color: inhert;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.topnav a:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+/* Header CSS */
+
+.header {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 50vw;
+    min-height: 400px;
+    max-height: 550px;
+    min-width: 300px;
+    color: #eee;
+}
+
+.header:after {
+    content: "";
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(27, 32, 48, 1) 100%);
+}
+
+.header:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+    background: #1B2030 url(https://unsplash.it/1999/899?image=970) top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: grow 30s linear 15ms infinite;
+    transition: all 0.2s ease-in-out;
+    z-index: -2;
+}
+
+.header a {
+    color: #000;
+}
+
+
+/* Fate to de decided later
+
+.menu {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-decoration: none
+}
+
+.menu:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  margin: 0 auto;
+  top: 5px;
+  left: 0;
+  right: 0;
+  box-shadow: 0 8px, 0 16px
+}
+
+.logo {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 1.2em;
+  box-sizing: border-box
+} */
+
+
+/* Image animations CSS */
+
+.img-responsive {
+    max-width: 100%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    height: auto;
+}
+
+.img-responsive:hover {
+    opacity: 0.3;
+    background-color: #d4d5dd;
+}
+
+
+/* Tags stuff (Needs more tought) CSS */
+
+p {
+    font-size: 1.1em;
+    color: black;
+}
+
+span {
+    font-size: 1.1em;
+    color: black;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: #333;
+    background-color: #333;
+}
+
+
+/* Home section (Needs more tought) CSS */
+
+.sides {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.info {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.info {
+    width: 100%;
+    padding: 15% 10% 0 10%;
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.author {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(https://www.facebook.com/kabubu.org/photos/a.225643804632197.1073741825.225643771298867/225644874632090/?type=1&theater) center no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 3px;
+}
+
+.info h4,
+.meta {
+    font-size: 1.5em;
+    color: black;
+}
+
+.meta {
+    font-style: italic;
+}
+
+ol {
+    background: #FFFFFF;
+    padding: 20px;
+}
+
+ol li {
+    background: #FFFFFF;
+    padding: 5px;
+    margin-left: 35px;
+    text-align: left;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.content {
+    padding: 5% 10%;
+    text-align: center;
+}
+
+
+/*  Fate to de decided later
+
+.btn {
+  color: #333;
+  border: 2px solid;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: 600
+}
+
+.twtr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px
+}
+
+*/
+
+
+/* Social Icons CSS */
+
+.fa {
+    color: #000;
+    padding: 5px 10px;
+    font-size: 50px;
+    width: 50px;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+/* Skills CSS */
+
+.contain {
+    background-color: #fff;
+    color: #333;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.chart {
+    position: relative;
+    display: inline-block;
+    color: #999;
+    font-size: 20px;
+    margin-right: 110px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.chart figcaption {
+    padding: 50px 25px;
+    width: 100px;
+    height: 50px;
+    border: 20px solid #ffffff;
+    border-radius: 100px;
+    line-height: 50px;
+}
+
+.chart img {
+    position: absolute;
+    max-width: 100px;
+    max-height: 100px;
+    background: white;
+}
+
+
+/* END Container styles */
+
+
+/* Colors for the circles and positions for the graphics */
+
+.html {
+    top: 50px;
+    left: 45px;
+}
+
+.html+svg .outer {
+    stroke: #e34f26;
+}
+
+.css {
+    top: 55px;
+    left: 48px;
+}
+
+.css+svg .outer {
+    stroke: #0d84ce;
+}
+
+.javascript {
+    max-width: 90px;
+    max-height: 90px;
+    top: 45px;
+    left: 45px;
+}
+
+.javascript+svg .outer {
+    stroke: #f0e040;
+}
+
+.python {
+    max-width: 90px;
+    max-height: 90px;
+    top: 45px;
+    left: 45px;
+}
+
+.python+svg .outer {
+    stroke: #0a1635;
+}
+
+.react {
+    width: 200px;
+    height: 200px;
+    top: 45px;
+    left: 45px;
+}
+
+.react+svg .outer {
+    stroke: #00bfff;
+}
+
+.node {
+    width: 200px;
+    height: 200px;
+    top: 45px;
+    left: 45px;
+}
+
+.node+svg .outer {
+    stroke: #83cd29;
+}
+
+.chart svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.outer {
+    fill: transparent;
+    stroke: #333;
+    stroke-width: 20;
+    stroke-dasharray: 534;
+    transition: stroke-dashoffset 1s;
+    -webkit-animation-play-state: running;
+    /* firefox bug fix - won't rotate at 90deg angles */
+    -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart:hover .outer {
+    stroke-dashoffset: 534 !important;
+    -webkit-animation-play-state: paused;
+}
+
+
+/* END Circle colors and graphic positions */
+
+
+/* Set the initial values for the animation */
+
+.chart[data-percent='100'] .outer {
+    stroke-dashoffset: 0;
+    -webkit-animation: show100 2s;
+    animation: show100 2s;
+}
+
+.chart[data-percent='75'] .outer {
+    stroke-dashoffset: 133;
+    -webkit-animation: show75 2s;
+    animation: show75 2s;
+}
+
+.chart[data-percent='50'] .outer {
+    stroke-dashoffset: 267;
+    -webkit-animation: show50 2s;
+    animation: show50 2s;
+}
+
+.chart[data-percent='25'] .outer {
+    stroke-dashoffset: 401;
+    -webkit-animation: show25 2s;
+    animation: show25 2s;
+}
+
+
+/* END set initial animation values */
+
+
+/* Keyframes for the initial animation */
+
+@-webkit-keyframes show100 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes show100 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes show75 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 134;
+    }
+}
+
+@keyframes show75 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 124;
+    }
+}
+
+@-webkit-keyframes show50 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 267;
+    }
+}
+
+@keyframes show50 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 267;
+    }
+}
+
+@-webkit-keyframes show25 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 401;
+    }
+}
+
+@keyframes show25 {
+    from {
+        stroke-dashoffset: 537;
+    }
+    to {
+        stroke-dashoffset: 401;
+    }
+}
+
+
+/* END Keyframes for the initial animation */
